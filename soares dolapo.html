@@ -1,7 +1,27 @@
 <!DOCTYPE html>
+
+<script type="text/javascript">
+  function validate () {
+     
+     let Name = document.getElementById("Name");
+     let Message = document.getElementById("Message");
+  
+    if(Name.value < 4){
+      alert("Needed")
+         return false;
+    }
+    if(Message.value < 20){
+      alert("Needed")
+      return false;
+    }
+  }
+  
+  
+  </script>
 <main class="main>
    <img class="center" src="https://res.cloudinary.com/soares04/image/upload/v1566492008/uxxbl8xkagqeo9h00pl8.jpg" alt="Picture" width="250px" height="250px"/>
 <hr/>
+<head><title> MY-CV</title></head>
    <style>
       .main {
        border: solid;
@@ -28,10 +48,24 @@
       p1{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
+      .input,.msg {
+        margin: 10px;
+        align: left;
+         
+      }
+      .input{
+        border: solid;
+      }
+      .msg textarea{
+        height: 50px;
+        border: solid;
+      }
+      button{
+        border: solid
    </style>
- <head>
+ <title>
    <h1 style="text-align: center">MY-CV</h1>
- </head>
+ </title>
    
    <hr/>
    <body>
@@ -80,7 +114,26 @@
      <h3>EDUCATION</h3><br>
      <p1>November(2009) - May(2015)</p1>
      <p><strong>UNIVERSITY OF LAGOS</strong> - B.Sc Mechanical Engineering.</p>
- </footer>
-       
+ </footer><hr>
+ 
+ <h3>
+     <div>CONTACT ME</div>
+ </h3>
+<form action="#" method="post" onsubmit="return validate()">
+ <div class="wrapper">
+   <div class="contact-form" id="Form">
+     <div class="input-fields" >
+         <input type="text" placeholder="Name" class="input" id="Name" ><br>
+         <input type="text" placeholder="Email" class="input" id="Email"><br>
+         <input type="type" placeholder="Title" class="input"><br>
+     </div>
+     <div class = "msg">
+         <textarea id ="Message" placeholder="Message"></textarea><br>
+         <button id="submit" type="submit">Send</button>   
+     </div>             
+
+  </div>
+ </div>
+</form>
 </main>
 </html>
